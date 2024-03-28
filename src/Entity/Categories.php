@@ -2,14 +2,19 @@
 
 namespace App\Entity;
 
-use App\Repository\CategoriesRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Entity\Trait\SlugTrait;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CategoriesRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
 #[ORM\Entity(repositoryClass: CategoriesRepository::class)]
 class Categories
 {
+
+    //Importation d'un trait contenant la propriété "slug" ainsi que les accesseurs de cette propriété.
+    use SlugTrait;
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
