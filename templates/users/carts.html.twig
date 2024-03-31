@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes commandes{% endblock %}
+{% block nav %}{% include "_partials/_nav.html.twig" %}{% endblock %}
+
+{% block body %}
+
+  <div class="user_container">
+    <aside class="user_aside">
+
+      {# Image ou photo utilisateur #}
+      <img src="" alt="">
+      <h1>{{ user.firstname }} {{ user.lastname }}</h1>
+      <p>N° de client : MIFRAMAZZL006</p>
+      <a href="#">
+        <span class="material-symbols-outlined">power_settings_new</span>
+        Se déconnecter
+      </a>
+      <nav class="userProfileNav">
+        <a href="{{ path('profile_details', {id: user.id}) }}">Mes informations</a>
+        <a href="{{ path('profile_orders', {id: user.id}) }}">Mes commandes</a>
+        <a href="{{ path('profile_addresses', {id: user.id}) }}">Mes adresses</a> 
+        <a href="{{ path('profile_cart', {id: user.id}) }}">Mes paniers</a>
+        <a href="{{ path('profile_addresses', {id: user.id}) }}">Bons d'achats & Avoirs</a>
+        <a href="{{ path('profile_addresses', {id: user.id}) }}">Mes paramètres</a>
+      </nav>
+
+    </aside>
+
+    <section>
+      <h2>0</h2>
+    {# si != 0  #}
+      <p>panier enregistré</p>
+      {# <p>paniers enregistrés</p> #}
+    </section>
+
+  </div>
+{% endblock %}
+{% block footer %}{% include "_partials/_footer.html.twig" %}{% endblock %}

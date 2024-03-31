@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+{% block nav %}{% include "_partials/_nav2.html.twig" %}{% endblock %}
+
+{% block body %}
+<section class="login_container">
+    <form method="post">
+        {# En cas d'erreur #}
+        {% if error %}
+            <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        {# Connexion effectuée #}
+        {% if app.user %}
+            <div class="mb-3">
+                Vous êtes connecté en tant que {{ app.user.userIdentifier }}</br> <a href="{{ path('app_logout') }}">Déconnexion</a>
+            </div>
+        {% endif %}
+
+        {# Formulaire de connexion #}
+        <h1>Identifiez-vous</h1>
+
+        <div class="login_slider">
+            <p>Déjà client ?</p>
+            <p>Nouveau client ?</p>            
+        </div>
+
+        <p>Connectez-vous avec votre adresse email et votre mot de passe pour accéder à votre espace client.</p>
+
+        <div class="login_inputs">
+            <label for="inputEmail"></label>
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" placeholder="Email" required autofocus>
+            <label for="inputPassword"></label>
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Mot de passe" autocomplete="current-password" required>
+        </div>
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+        <a href="#" class="forgot">Mot de passe oublié ?</a>
+
+        <div>
+            <label><input type="checkbox" name="_remember_me">Rester connecté</label>
+        </div>
+
+        <button type="submit" class="login_submit">Connexion <span>></span></button>
+    </form>
+
+</section>
+
+{% endblock %}

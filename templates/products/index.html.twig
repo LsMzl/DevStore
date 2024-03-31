@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductsController!{% endblock %}
+
+{% block body %}
+
+<div>
+    {% for product in products %}              
+        {# Lien vers la page du produit #}
+        <a href="{{path('products_details', {slug: product.slug})}}">
+            <p>{{product.name}}</p>
+        </a> 
+    {% endfor %}
+</div>
+
+{% endblock %}

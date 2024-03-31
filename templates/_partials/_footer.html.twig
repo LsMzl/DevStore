@@ -1,30 +1,123 @@
-<footer class="w-100 py-4 flex-shrink-0">
-        <div class="container py-4">
-            <div class="row gy-4 gx-5">
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="h1 text-white"></h5>
-                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                    <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">LouisMzl</a></p>
+<footer>
+    <div class="footer_container">
+        {# Paiements et transporteurs #}
+        <div class="footer_top">
+            {# Moyens de paiement #}
+            <div class="top_rubriques">
+                <h3>Moyens de paiement acceptés</h3>
+                <div class="badges">
+                    <p>Visa</p>
+                    <p>MC</p>
+                    <p>cb</p>
+                    <p>paypal</p>
+                    <p>virement</p>
+                    <p>amexpress</p>
                 </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5 class="text-white mb-3">Quick links</h5>
-                    <ul class="list-unstyled text-muted">
-                        <li><a href="{{ path('index')}}">Accueil</a></li>
-                        <li><a href="#">A propos</a></li>
-                        <li><a href="#">Livraison</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-3">Newsletter</h5>
-                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-                    <form action="#">
-                        <div class="input-group mb-3">
-                            <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
-                        </div>
-                    </form>
+            </div>
+            {# Transporteurs #}
+            <div class="top_rubriques">
+                <h3>Nos transporteurs</h3>
+                <div class="badges">
+                    <p>colissimo</p>
+                    <p>chronopost</p>
+                    <p>relais</p>
+                    <p>trait en magasin</p>
                 </div>
             </div>
         </div>
-    </footer>
+
+        {# Rubriques #}
+        <div class="footer_rubriques">
+            {# Qui sommes-nous ?#}
+            <div class="footer_rubrique">
+                <p class="rubrique_title">Qui sommes-nous ?</p>
+                <div class="footer_rubrique_column">
+                    <a href="#">Qui sommes-nous ?</a>
+                    <a href="#">Nos services</a>
+                    <a href="#">Les magasins DevStore</a>
+                    <a href="#">Contactez-nous</a>
+                </div>
+            </div>
+            {# Une questions ? #}
+            <div class="footer_rubrique">
+                <p class="rubrique_title">Une questions ? </p>
+                <div class="footer_rubrique_column">
+                    <a href="#">Rubrique d'aide / FAQ</a>
+                    <a href="#">Paiement, livraison</a>
+                    <a href="#">Garanties, Pack Zen</a>
+                    <a href="#">SAV, demander un retour</a>
+                    <a href="#">Informations</a>
+                    <a href="#">Guides d'achats et tutoriels</a>
+
+                </div>
+            </div>
+            {# Devstore & vous #}
+            <div class="footer_rubrique">
+                <p class="rubrique_title">Devstore & vous</p>
+                <div class="footer_rubrique_column">
+                    <a href="#">Notre démarche écologique</a>
+                    <a href="#">DevStore recrute</a>
+                    <a href="#">Notre programme d'affiliation</a>
+                </div>
+            </div>
+            {# Informations #}
+            <div class="footer_rubrique">
+                <p class="rubrique_title">Informations</p>
+                <div class="footer_rubrique_column">
+                    <a href="#">Plan du site</a>
+                    <a href="#">Conditions générales de vente</a>
+                    <a href="#">Informations légales</a>
+                    <a href="#">Données personnelles et cookies</a>
+                    <a href="#">Gérer vos cookies</a>
+
+                </div>
+            </div>
+            {# Evenements #}
+            <div class="footer_rubrique">
+                <p class="rubrique_title">Événements</p>
+                <div class="footer_rubrique_column">
+                    <a href="#">Black Friday</a>
+                    <a href="#">Cyber Monday</a>
+                    <a href="#">Cadeau high tech</a>
+                    <a href="#">Boxing day</a>
+                    <a href="#">Soldes 2024</a>
+                </div>
+            </div>
+        
+        </div>
+
+        {# Bandeau aide & contact #}
+        <div class="help">
+            {# Triangle aide #}
+            <div>
+                <p>Besoin d'aide ?</p>
+                <img src="" alt="">
+            </div>
+            {# Boutons contacts #}
+            <div class="help_contact">
+                <a href="" class="help_btn">Rubrique d'aide</a>
+                {# Téléphone #}
+                <div>
+                    <a href="">02 40 92 91 91</a>
+                    <p>(numéro non surtaxé)</p>
+                </div>
+                <a href="" class="help_btn">Contactez-nous</a>
+            </div>
+        </div>
+
+        {# Réseaux sociaux #}
+        <div class="top_rubriques">
+            <p>DevStore sur les réseaux sociaux</p>
+            {# Logos vers réseaux sociaux #}
+            <div>
+                <a href=""><img src="" alt="">Ytb</a>
+                <a href=""><img src="" alt="">twitch</a>
+                <a href=""><img src="" alt="">fb</a>
+                <a href=""><img src="" alt="">insta</a>
+                <a href=""><img src="" alt="">X</a>
+                <a href=""><img src="" alt="">In</a>
+                <a href=""><img src="" alt="">tiktok</a>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes commandes{% endblock %}
+{% block nav %}{% include "_partials/_nav.html.twig" %}{% endblock %}
+
+{% block body %}
+
+  <div class="user_container">
+    <aside class="user_aside">
+
+      {# Image ou photo utilisateur #}
+      <div class="aside_infos">
+        <img src="" alt="">
+        <h1>{{ user.firstname }} {{ user.lastname }}</h1>
+        <p class="NumCustomer">N° de client : <strong>MIFRAMAZZL006</strong></p>
+        <button>
+          <a href="#">
+            <span class="material-symbols-outlined">power_settings_new</span>
+            Se déconnecter
+          </a>
+        </button>
+      </div>
+
+      <nav class="userProfileNav">
+        <a href="{{ path('profile_details', {id: user.id}) }}">Mes informations</a>
+        <a href="{{ path('profile_orders', {id: user.id}) }}">Mes commandes</a>
+        <a href="{{ path('profile_addresses', {id: user.id}) }}">Mes adresses</a> 
+        <a href="{{ path('profile_cart', {id: user.id}) }}">Mes paniers</a>
+        <a href="{{ path('profile_addresses', {id: user.id}) }}">Bons d'achats & Avoirs</a>
+        <a href="{{ path('profile_addresses', {id: user.id}) }}">Mes paramètres</a>
+      </nav>
+
+    </aside>
+
+    <section class="user_page_section">
+      <h2>Informations personnelles</h2>
+      <p><span>*</span> Champs obligatoires</p>
+
+      <form action="" class="user_informations_form">      
+        <div>
+          <p>Civilité:</p>
+          <div>
+            <label for="">M.</label>
+            <label for="">Mme</label>       
+          </div>
+
+          <div class="user_form_input">
+            <label for="">Prénom<span>* </span>:</label>
+            <input type="text" name="" id="" value="{{ user.firstname }}">
+            <label for="">Nom<span>* </span>:</label>
+            <input type="text" name="" id="" value="{{ user.lastname }}">
+            <button type="submit">Valider</button>
+          </div>
+
+        </div>
+
+        <div class="user_form_input">
+          <label for="">Email<span>* </span>:</label>
+          <input type="email" name="" id="" value="{{ user.email }}">
+        </div>
+      </form>
+    
+      <p>
+        <span class="material-symbols-outlined">info</span>
+        Les informations recueillies par DevStore.fr font l'objet d'un traitement destiné à la gestion de la relation client-propect 
+        et aux opérations associées.
+        <a href="">
+          <span>Pour en savoir plus sur la gestion de vos données et vos droits</span>
+        </a>
+      </p>
+
+      <h2>Changer de mot de passe</h2>
+      <form action="" class="user_informations_form">
+        <div class="user_form_input">
+          <label for="">Mot de passe actuel<span>*</span>:</label>
+          <input type="text" name="" id="" placeholder="Mot de passe actuel">
+          <label for="">Nouveau mot de passe <span>*</span>:</label>
+          <input type="text" name="" id="" placeholder="Nouveau mot de passe">
+          <button type="submit">Valider</button>
+        </div>
+      </form>
+
+    </section>
+
+  </div>
+{% endblock %}
+{% block footer %}{% include "_partials/_footer.html.twig" %}{% endblock %}
+

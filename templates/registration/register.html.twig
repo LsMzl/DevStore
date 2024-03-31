@@ -3,7 +3,7 @@ block body %}
 <section class="container">
   <div class="row">
     <div class="col">
-      <h1>Inscription</h1>
+      <h1>Créez votre compte</h1>
 
       {{ form_errors(registrationForm) }}
 
@@ -11,9 +11,8 @@ block body %}
 
       {# Identité de l'utilisateur #}
       <fieldset class="mb-3">
-        <legend>Mon identité</legend>
-        {{ form_row(registrationForm.firstname) }}
-        {{ form_row(registrationForm.lastname) }}
+        <legend>Identifiants</legend>
+        <p><span>*</span>Champs obligatoires</p>
         {{ form_row(registrationForm.email) }}
         {{
           form_row(registrationForm.plainPassword, {
@@ -24,7 +23,9 @@ block body %}
 
       {# Coordonnées de l'utilisateur #}
       <fieldset class="mb-3">
-        <legend>Mes coordonnées</legend>
+        <legend>Informations personnelles</legend>
+        {{ form_row(registrationForm.firstname) }}
+        {{ form_row(registrationForm.lastname) }}
         {{ form_row(registrationForm.address) }}
         {{ form_row(registrationForm.zipcode) }}
         {{ form_row(registrationForm.city) }}

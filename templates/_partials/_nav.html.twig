@@ -1,46 +1,51 @@
-<nav class="navbar navbar-expand-lg bg-body-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">DevStore</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Liens</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-      {# Si l'utilisateur est connecté #}
-      {% if app.user %}
-        <li class="nav-item"><a class="nav-link" href="#">Mon compte</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ path('app_logout')}}">Me déconnecter</a></li>
-      {% else %}
-
-      {# Si l'utilisateur n'est pas connecté #}   
-        <li class="nav-item"><a class="nav-link" href="{{ path('app_login')}}">Me connecter</a></li>
-        <li class="nav-item"><a class="nav-link" href="{{ path('app_register')}}">S'inscrire</a></li>
-      {% endif %}
-
-      </ul>
-    </div>
+<nav class="home_nav">
+<div class="nav_container">
+  <a href="{{ path('index') }}" class="main_logo">DevStore.fr</a>
+  <input type="search" name="" id="" placeholder="Chercher un produit, une marque, une catégorie">
+  <div>
+    <ul>
+      <li>
+        <span class="material-symbols-outlined icons_nav">location_on</span>
+        <a href="">Magasin</a>
+      </li>
+      <li>
+        {# {{ if app.user }} #}
+        <span class="material-symbols-outlined icons_nav">person</span>
+        <a href="">Compte</a> 
+        {# <a href="{{ path('profile_details', {id: user.id}) }}">Compte</a> #}
+        {# {{ else }} #}
+        {# <span class="material-symbols-outlined icons_nav">person</span>
+        <a href="{{ path('app_login')}}">Compte</a> #}
+        {# {{ endif }} #}
+      </li>
+      <li>
+        <span class="material-symbols-outlined icons_nav">shopping_bag</span>
+        <a href="">Panier</a>
+      </li>
+    </ul>
+  </div>
   </div>
 </nav>
+<div class="float_bar"> 
+  <div class="float_bar_left">
+    <a href="#" class="red_bg">Univers produits</a>
+    <a href="#"><span class="material-symbols-outlined">
+      desktop_windows</span>PC DevStore
+    </a>
+    <a href="#"><span class="material-symbols-outlined">
+      handyman</span>Configurateur PC
+      </a>
+    <a href="#"><span class="material-symbols-outlined">
+      sports_esports</span>Gaming
+      </a>
+    <a href="#"><span class="material-symbols-outlined">
+      description</span>Guides
+      </a>
+    <a href="#"><span class="material-symbols-outlined">
+      help</span>Aide
+      </a>
+  </div>
+  <div class="float_bar_right">
+    <a href="">Promos & Bons plans \/</a>
+  </div>
+</div>

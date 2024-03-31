@@ -8,10 +8,12 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class MainController extends AbstractController
 {
+
+    //Route vers la page d'accueil
     #[Route('/', name: 'index')]
     public function index(): Response
     {
-        return $this->render('main/index.html.twig', [
+        return $this->render('main/home.html.twig', [
             'controler_name' => 'MainController',
         ]);
     }

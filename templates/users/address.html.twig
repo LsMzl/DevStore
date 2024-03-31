@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes commandes{% endblock %}
+{% block nav %}{% include "_partials/_nav.html.twig" %}{% endblock %}
+
+{% block body %}
+
+  <div class="user_container">
+    <aside class="user_aside">
+
+      {# Image ou photo utilisateur #}
+      <img src="" alt="">
+      <h1>{{ user.firstname }} {{ user.lastname }}</h1>
+      <p>N° de client : MIFRAMAZZL006</p>
+      <a href="#">
+        <span class="material-symbols-outlined">power_settings_new</span>
+        Se déconnecter
+      </a>
+      <nav class="userProfileNav">
+        <a href="{{ path('profile_details', {id: user.id}) }}">Mes informations</a>
+        <a href="{{ path('profile_orders', {id: user.id}) }}">Mes commandes</a>
+        <a href="{{ path('profile_addresses', {id: user.id}) }}">Mes adresses</a> 
+        <a href="{{ path('profile_cart', {id: user.id}) }}">Mes paniers</a>
+        <a href="{{ path('profile_addresses', {id: user.id}) }}">Bons d'achats & Avoirs</a>
+        <a href="{{ path('profile_addresses', {id: user.id}) }}">Mes paramètres</a>
+      </nav>
+
+    </aside>
+
+    <section>
+      <h2>Carnet d'adresses </h2>
+      <p>Retrouvez ici les adresses anregistrées lors de vos précédents achats sur notre site.</p>
+      <p><strong>Vous pouvez sélectionner votre adresse préférée pour gagner du temps lors de vos prochaines commandes</strong></p>
+
+      <div>
+        <div>
+          <span class="material-symbols-outlined">description</span>
+          <h3>Adresse de facturation</h3>
+        </div>
+        <div>
+          <p>{{ user.lastname }} {{ user.firstname }}</p>
+          <p>{{ user.address }}</p>
+          <p>{{ user.zipcode }} {{ user.city }}</p>
+        </div>
+        <span class="material-symbols-outlined">edit</span>
+      </div>
+
+      <div>
+        <div>
+          <span class="material-symbols-outlined">local_shipping</span>
+          <h3>Adresse de livraison</h3>
+        </div>
+        <div>
+          <p>{{ user.lastname }} {{ user.firstname }}</p>
+          <p>{{ user.address }}</p>
+          <p>{{ user.zipcode }} {{ user.city }}</p>
+        </div>
+        <span class="material-symbols-outlined">edit</span>
+      </div>
+
+      <button>Ajouter une adresse</button>
+
+    </section>
+
+  </div>
+{% endblock %}
+{% block footer %}{% include "_partials/_footer.html.twig" %}{% endblock %}
+

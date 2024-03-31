@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}DevStore - Accueil{% endblock %}
+{% block nav %}{% include "_partials/_nav.html.twig" %}{% endblock %}
+
+{% block body %}
+    {# Carousel #}
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    {# 23 ans d'expertises etc... #}
+    <div class="informations">
+        <div class="information_box">
+        
+            <p>23 ans d'expertise <br/>à votre service</p>
+        </div>
+        <div class="information_box">
+        
+            <p>+ de 15 000 références <br/>choisies par nos experts</p>
+        </div>
+        <div class="information_box">
+        
+            <p>Livraison en magasin offerte <br/>dès 200 euros d'achat</p>
+        </div>
+        <div class="information_box">
+        
+            <p>Une équipe clientèle <br/>à votre écoute</p>
+        </div>
+    </div>
+
+    {# Catégories principales #}
+    <section>
+    </section>
+
+    {# Nouveautés #}
+    {# Carousel #}
+    <section class="nouveautes">
+        <div>
+            <h2>Nouveautés</h2>
+            {# > + #}
+            <div>
+            </div>
+        </div> 
+    </section>
+
+    {# Loisirs high-tech : les produits phares #}
+    <section>
+        <h2>Loisirs high-tech : les produits phares</h2>
+        {# Flex 5 catégories populaires #}
+        <div class="produits_phares">
+            <div class="produits_phare">
+                <img src="{{ asset('assets/img/enceintes.jpg') }}" alt="Produit Phare">
+                <p>Enceinte connectée / <br>Assistant vocal</p>    
+            </div>
+            <div class="produits_phare">
+                <img src="{{ asset('assets/img/ecouteurs.jpg') }}" alt="Produit Phare">
+                <p>Ecouteurs True wireless</p>
+            </div>
+            <div class="produits_phare">
+                <img src="{{ asset('assets/img/casques.jpg') }}" alt="Produit Phare">
+                <p>Casque à réduction de bruit active</p>
+            </div>
+            <div class="produits_phare">
+                <img src="{{ asset('assets/img/streaming.jpg') }}" alt="Produit Phare">
+                <p>Matériel de streaming</p>
+            </div>
+            <div class="produits_phare">
+                <img src="{{ asset('assets/img/claviers.jpg') }}" alt="Produit Phare">
+                <p>Périphériques gaming</p>
+            </div>
+        </div>
+    </section>
+
+    {# Meilleures ventes #}
+    {# Carousel #}
+    <section class="best_sells">
+        <div>
+            <h2>Meilleures ventes</h2>
+            {# > + #}
+            <div>
+            </div>
+        </div> 
+    </section>
+
+
+
+
+
+
+{% endblock %}
+{% block footer %}{% include "_partials/_footer.html.twig" %}{% endblock %}
